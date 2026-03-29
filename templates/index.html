@@ -409,7 +409,7 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
 
@@ -717,7 +717,7 @@
   <section>
     <div class="section-inner">
       <p class="section-label reveal">What We Build</p>
-      <h2 class="projects-title reveal">Two products.<br>One standard.</h2>
+      <h2 class="projects-title reveal">Three products.<br>One standard.</h2>
       <div class="projects-grid">
         <a href="https://lees-legacy.onrender.com" target="_blank" class="project-card reveal">
           <p class="project-number">01</p>
@@ -744,6 +744,19 @@
             <span class="tag">Global Leaderboard</span>
           </div>
           <span class="project-link">Play Now</span>
+        </a>
+        <a href="https://timezone-d99n.onrender.com" target="_blank" class="project-card reveal">
+          <p class="project-number">03</p>
+          <h3 class="project-name">World Clock & Currency</h3>
+          <p class="project-desc">A full-stack world clock and live currency converter tracking 34 cities across 6
+            continents. Built with Python, Flask, and real-time API integrations.</p>
+          <div class="project-tags">
+            <span class="tag">Flask</span>
+            <span class="tag">Live API</span>
+            <span class="tag">34 Cities</span>
+            <span class="tag">6 Continents</span>
+          </div>
+          <span class="project-link">View App</span>
         </a>
       </div>
     </div>
