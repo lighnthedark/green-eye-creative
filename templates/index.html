@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Green Eye Creative — Built on Legacy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --gold: #C9A84C;
@@ -17,9 +20,17 @@
       --cream-muted: #B8B0A0;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--dark);
@@ -31,13 +42,15 @@
     /* ─── NAV ─── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1.5rem 3rem;
-      background: linear-gradient(to bottom, rgba(10,9,5,0.9), transparent);
+      background: linear-gradient(to bottom, rgba(10, 9, 5, 0.9), transparent);
     }
 
     .nav-logo {
@@ -61,7 +74,10 @@
       text-decoration: none;
       transition: background 0.3s;
     }
-    .nav-cta:hover { background: var(--gold-light); }
+
+    .nav-cta:hover {
+      background: var(--gold-light);
+    }
 
     /* ─── HERO ─── */
     .hero {
@@ -86,19 +102,22 @@
     }
 
     @keyframes heroZoom {
-      from { transform: scale(1.05); }
-      to   { transform: scale(1.0); }
+      from {
+        transform: scale(1.05);
+      }
+
+      to {
+        transform: scale(1.0);
+      }
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(10,9,5,0.92) 0%,
-        rgba(10,9,5,0.4) 50%,
-        rgba(10,9,5,0.15) 100%
-      );
+      background: linear-gradient(to top,
+          rgba(10, 9, 5, 0.92) 0%,
+          rgba(10, 9, 5, 0.4) 50%,
+          rgba(10, 9, 5, 0.15) 100%);
     }
 
     .hero-content {
@@ -109,8 +128,15 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero-eyebrow {
@@ -166,12 +192,16 @@
       text-decoration: none;
       transition: background 0.3s, transform 0.2s;
     }
-    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
 
     .btn-ghost {
       display: inline-block;
       padding: 1rem 2.2rem;
-      border: 1px solid rgba(201,168,76,0.4);
+      border: 1px solid rgba(201, 168, 76, 0.4);
       color: var(--gold);
       font-family: 'Syne', sans-serif;
       font-size: 0.75rem;
@@ -181,7 +211,11 @@
       text-decoration: none;
       transition: border-color 0.3s, background 0.3s;
     }
-    .btn-ghost:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      background: rgba(201, 168, 76, 0.08);
+    }
 
     /* ─── SCROLL INDICATOR ─── */
     .scroll-hint {
@@ -196,6 +230,7 @@
       opacity: 0.5;
       animation: fadeUp 1.5s ease-out 1.5s both;
     }
+
     .scroll-hint span {
       font-size: 0.6rem;
       letter-spacing: 0.3em;
@@ -203,19 +238,32 @@
       color: var(--cream-muted);
       writing-mode: vertical-rl;
     }
+
     .scroll-line {
       width: 1px;
       height: 60px;
       background: linear-gradient(to bottom, var(--gold), transparent);
       animation: scrollPulse 2s ease-in-out infinite;
     }
+
     @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 1; transform: scaleY(1.1); }
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scaleY(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(1.1);
+      }
     }
 
     /* ─── SECTIONS ─── */
-    section { position: relative; }
+    section {
+      position: relative;
+    }
 
     .section-inner {
       max-width: 1200px;
@@ -234,11 +282,12 @@
       align-items: center;
       gap: 1rem;
     }
+
     .section-label::after {
       content: '';
       flex: 1;
       height: 1px;
-      background: rgba(201,168,76,0.3);
+      background: rgba(201, 168, 76, 0.3);
       max-width: 80px;
     }
 
@@ -267,13 +316,16 @@
       object-position: center top;
       transition: transform 0.8s ease;
     }
-    .roots-image-wrap:hover img { transform: scale(1.04); }
+
+    .roots-image-wrap:hover img {
+      transform: scale(1.04);
+    }
 
     .roots-image-wrap::after {
       content: '';
       position: absolute;
       inset: 0;
-      border: 1px solid rgba(201,168,76,0.2);
+      border: 1px solid rgba(201, 168, 76, 0.2);
       pointer-events: none;
     }
 
@@ -312,7 +364,7 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      border-left: 2px solid rgba(201,168,76,0.3);
+      border-left: 2px solid rgba(201, 168, 76, 0.3);
       padding-left: 1.5rem;
     }
 
@@ -322,6 +374,7 @@
       font-style: italic;
       color: var(--gold);
     }
+
     .roots-name span {
       display: block;
       font-family: 'Syne', sans-serif;
@@ -353,27 +406,32 @@
       position: relative;
       overflow: hidden;
       background: var(--dark-2);
-      border: 1px solid rgba(201,168,76,0.15);
+      border: 1px solid rgba(201, 168, 76, 0.15);
       padding: 3rem;
       transition: border-color 0.3s, transform 0.3s;
       text-decoration: none;
       display: block;
     }
+
     .project-card:hover {
-      border-color: rgba(201,168,76,0.5);
+      border-color: rgba(201, 168, 76, 0.5);
       transform: translateY(-4px);
     }
 
     .project-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 3px;
       height: 0;
       background: var(--gold);
       transition: height 0.4s ease;
     }
-    .project-card:hover::before { height: 100%; }
+
+    .project-card:hover::before {
+      height: 100%;
+    }
 
     .project-number {
       font-size: 0.65rem;
@@ -411,7 +469,7 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--gold);
-      border: 1px solid rgba(201,168,76,0.3);
+      border: 1px solid rgba(201, 168, 76, 0.3);
       padding: 0.3rem 0.7rem;
     }
 
@@ -430,7 +488,10 @@
       content: '→';
       transition: transform 0.2s;
     }
-    .project-card:hover .project-link::after { transform: translateX(4px); }
+
+    .project-card:hover .project-link::after {
+      transform: translateX(4px);
+    }
 
     /* ─── PHILOSOPHY ─── */
     .philosophy {
@@ -484,7 +545,7 @@
     /* ─── FOOTER ─── */
     footer {
       background: var(--dark-2);
-      border-top: 1px solid rgba(201,168,76,0.15);
+      border-top: 1px solid rgba(201, 168, 76, 0.15);
     }
 
     .footer-inner {
@@ -520,7 +581,10 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-links a:hover { color: var(--gold); }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
 
     .footer-copy {
       font-size: 0.65rem;
@@ -535,6 +599,7 @@
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
@@ -542,16 +607,39 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
-      nav { padding: 1.2rem 1.5rem; }
-      .hero { padding: 4rem 1.5rem 3rem; }
-      .section-inner { padding: 5rem 1.5rem; }
-      .roots-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .roots-image-wrap { height: 380px; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; align-items: flex-start; }
+      nav {
+        padding: 1.2rem 1.5rem;
+      }
+
+      .hero {
+        padding: 4rem 1.5rem 3rem;
+      }
+
+      .section-inner {
+        padding: 5rem 1.5rem;
+      }
+
+      .roots-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .roots-image-wrap {
+        height: 380px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAV -->
@@ -567,7 +655,8 @@
     <div class="hero-content">
       <p class="hero-eyebrow">Austin, Texas · Est. 2024</p>
       <h1 class="hero-title">Green Eye<br><em>Creative</em></h1>
-      <p class="hero-sub">Apps, games, and digital experiences built on a foundation of legacy, discipline, and craft.</p>
+      <p class="hero-sub">Apps, games, and digital experiences built on a foundation of legacy, discipline, and craft.
+      </p>
       <div class="hero-actions">
         <a href="https://lees-legacy.onrender.com" target="_blank" class="btn-primary">Visit Lee's Legacy</a>
         <a href="https://space-invaders-n01i.onrender.com" target="_blank" class="btn-ghost">Play Green Zone Defence</a>
@@ -590,7 +679,8 @@
         <div class="roots-text reveal">
           <p class="section-label">The Foundation</p>
           <h2>Rooted in<br><em>Legacy</em></h2>
-          <p>Every line of code is built on something deeper — a lineage of people who showed up, worked hard, and left something behind worth carrying forward.</p>
+          <p>Every line of code is built on something deeper — a lineage of people who showed up, worked hard, and left
+            something behind worth carrying forward.</p>
           <p>Green Eye Creative exists because of them.</p>
           <div class="roots-names">
             <div class="roots-name">
@@ -620,7 +710,8 @@
         <a href="https://lees-legacy.onrender.com" target="_blank" class="project-card reveal">
           <p class="project-number">01</p>
           <h3 class="project-name">Lee's Legacy</h3>
-          <p class="project-desc">A barber scheduling SaaS that eliminates double bookings, collects deposits, and connects clients to barbers in their zip code. Named in honor of Richard Lee Green Sr.</p>
+          <p class="project-desc">A barber scheduling SaaS that eliminates double bookings, collects deposits, and
+            connects clients to barbers in their zip code. Named in honor of Richard Lee Green Sr.</p>
           <div class="project-tags">
             <span class="tag">SaaS</span>
             <span class="tag">Flask</span>
@@ -632,7 +723,8 @@
         <a href="https://space-invaders-n01i.onrender.com" target="_blank" class="project-card reveal">
           <p class="project-number">02</p>
           <h3 class="project-name">Green Zone Defence</h3>
-          <p class="project-desc">A browser-based tower defense game with a global leaderboard, mobile touch controls, and authenticated user accounts. Tested by players worldwide.</p>
+          <p class="project-desc">A browser-based tower defense game with a global leaderboard, mobile touch controls,
+            and authenticated user accounts. Tested by players worldwide.</p>
           <div class="project-tags">
             <span class="tag">Browser Game</span>
             <span class="tag">Supabase</span>
@@ -672,7 +764,18 @@
   </footer>
 
   <script>
-    // Reveal on scroll
+    // Disable right click and image protection
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.onkeydown = function (e) {
+      if (e.keyCode === 123) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode === 73) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode === 74) return false;
+      if (e.ctrlKey && e.keyCode === 85) return false;
+    };// Reveal on scroll
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
@@ -683,6 +786,3 @@
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
   </script>
-
-</body>
-</html>
