@@ -27,7 +27,6 @@
       font-family: 'Syne', sans-serif;
       overflow-x: hidden;
     }
-
     /* ─── NAV ─── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -54,7 +53,6 @@
       text-decoration: none; transition: background 0.3s;
     }
     .nav-cta:hover { background: var(--gold-light); }
-
     /* ─── HERO ─── */
     .hero {
       position: relative; height: 100vh; min-height: 600px;
@@ -93,9 +91,7 @@
       font-size: 1rem; font-weight: 400; color: var(--cream-muted);
       max-width: 520px; line-height: 1.7; margin-bottom: 2.5rem;
     }
-    .hero-actions {
-      display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; }
     .btn-primary {
       display: inline-block; padding: 1rem 2.2rem;
       background: var(--gold); color: var(--dark);
@@ -115,7 +111,6 @@
       transition: border-color 0.3s, background 0.3s;
     }
     .btn-ghost:hover { border-color: var(--gold); background: rgba(201, 168, 76, 0.08); }
-
     /* ─── SCROLL HINT ─── */
     .scroll-hint {
       position: absolute; bottom: 2rem; right: 3rem; z-index: 2;
@@ -136,12 +131,9 @@
       0%, 100% { opacity: 0.3; transform: scaleY(1); }
       50% { opacity: 1; transform: scaleY(1.1); }
     }
-
     /* ─── SECTIONS ─── */
     section { position: relative; }
-    .section-inner {
-      max-width: 1200px; margin: 0 auto; padding: 7rem 3rem;
-    }
+    .section-inner { max-width: 1200px; margin: 0 auto; padding: 7rem 3rem; }
     .section-label {
       font-size: 0.65rem; font-weight: 700; letter-spacing: 0.4em;
       text-transform: uppercase; color: var(--gold);
@@ -151,7 +143,6 @@
       content: ''; flex: 1; height: 1px;
       background: rgba(201, 168, 76, 0.3); max-width: 80px;
     }
-
     /* ─── MISSION ─── */
     .mission { background: var(--dark); }
     .mission-inner { max-width: 900px; }
@@ -166,20 +157,16 @@
       font-size: 1rem; line-height: 1.85;
       color: var(--cream-muted); max-width: 660px;
     }
-
     /* ─── ROOTS ─── */
     .roots { background: var(--dark-2); }
     .roots-grid {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 5rem; align-items: center;
     }
-    .roots-image-wrap {
-      position: relative; height: 580px; overflow: hidden;
-    }
+    .roots-image-wrap { position: relative; height: 580px; overflow: hidden; }
     .roots-image-wrap img {
       width: 100%; height: 100%; object-fit: cover;
-      object-position: center top;
-      transition: transform 0.8s ease;
+      object-position: center top; transition: transform 0.8s ease;
     }
     .roots-image-wrap:hover img { transform: scale(1.04); }
     .roots-image-wrap::after {
@@ -214,7 +201,6 @@
       font-size: 0.65rem; font-style: normal; letter-spacing: 0.2em;
       text-transform: uppercase; color: var(--cream-muted); margin-top: 0.2rem;
     }
-
     /* ─── PROJECTS ─── */
     .projects-title {
       font-family: 'Cormorant Garamond', serif;
@@ -257,10 +243,7 @@
       font-size: 0.85rem; line-height: 1.8;
       color: var(--cream-muted); margin-bottom: 2rem;
     }
-    .project-tags {
-      display: flex; flex-wrap: wrap; gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
     .tag {
       font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--gold);
@@ -272,10 +255,11 @@
       text-transform: uppercase; color: var(--gold);
       display: flex; align-items: center; gap: 0.5rem;
       margin-top: auto;
+      text-decoration: none;
     }
     .project-link::after { content: '→'; transition: transform 0.2s; }
     .project-card:hover .project-link::after { transform: translateX(4px); }
-
+    .project-link + .project-link { margin-top: 0.7rem; }
     /* ─── PHILOSOPHY ─── */
     .philosophy { position: relative; overflow: hidden; }
     .phil-bg {
@@ -300,7 +284,6 @@
       font-size: 0.7rem; letter-spacing: 0.3em;
       text-transform: uppercase; color: var(--cream-muted);
     }
-
     /* ─── FOOTER ─── */
     footer {
       background: var(--dark-2);
@@ -340,14 +323,12 @@
       transition: color 0.2s;
     }
     .footer-email:hover { color: var(--gold); }
-
     /* ─── REVEAL ─── */
     .reveal {
       opacity: 0; transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       nav { padding: 1.2rem 1.5rem; }
@@ -363,16 +344,15 @@
   </style>
 </head>
 <body>
-
   <!-- NAV -->
   <nav>
     <a href="/" class="nav-logo">Green Eye Creative</a>
     <div class="nav-right">
       <a href="/about" class="nav-link">About</a>
+      <a href="/restaurants" class="nav-link">Restaurants</a>
       <a href="https://lees-legacy.onrender.com" target="_blank" class="nav-cta">Legacy →</a>
     </div>
   </nav>
-
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
@@ -391,7 +371,6 @@
       <span>Scroll</span>
     </div>
   </section>
-
   <!-- MISSION -->
   <section class="mission">
     <div class="section-inner mission-inner">
@@ -400,7 +379,6 @@
       <p class="mission-body reveal">The ones who couldn't afford shortcuts, didn't have the test bank, and still showed up. Green Eye Creative exists to level that playing field — one product at a time.</p>
     </div>
   </section>
-
   <!-- ROOTS -->
   <section class="roots">
     <div class="section-inner">
@@ -432,27 +410,25 @@
       </div>
     </div>
   </section>
-
   <!-- PROJECTS -->
   <section>
     <div class="section-inner">
       <p class="section-label reveal">What I Build</p>
       <h2 class="projects-title reveal">Six products.<br><em>One mission.</em></h2>
       <div class="projects-grid">
-
-        <a href="https://lees-legacy.onrender.com" target="_blank" class="project-card reveal">
+        <div class="project-card reveal">
           <p class="project-number">01</p>
           <h3 class="project-name">Legacy</h3>
-          <p class="project-desc">Cross-platform scheduling for working barbers. One chair, one price. No tiers, no booking fees, no cuts. Available with the Spotlight content add-on.</p>
+          <p class="project-desc">Cross-platform scheduling for working operators. Live with barbers. Now piloting with Austin restaurants. One chair, one price — no tiers, no booking fees, no cuts.</p>
           <div class="project-tags">
             <span class="tag">Live</span>
             <span class="tag">Multi-vertical</span>
             <span class="tag">Stripe Connect</span>
             <span class="tag">Google OAuth</span>
           </div>
-          <span class="project-link">Visit App</span>
-        </a>
-
+          <a href="https://lees-legacy.onrender.com" target="_blank" class="project-link">Visit App</a>
+          <a href="/restaurants" class="project-link">For Restaurants</a>
+        </div>
         <a href="https://ayrt.onrender.com" target="_blank" class="project-card reveal">
           <p class="project-number">02</p>
           <h3 class="project-name">AYRT</h3>
@@ -465,7 +441,6 @@
           </div>
           <span class="project-link">Learn More</span>
         </a>
-
         <a href="https://greeneyecreative-ttc.netlify.app" target="_blank" class="project-card reveal">
           <p class="project-number">03</p>
           <h3 class="project-name">Turing True Check</h3>
@@ -477,7 +452,6 @@
           </div>
           <span class="project-link">Visit TTC</span>
         </a>
-
         <a href="#" class="project-card reveal">
           <p class="project-number">04</p>
           <h3 class="project-name">Green Seed Co.</h3>
@@ -489,7 +463,6 @@
           </div>
           <span class="project-link">The Blend</span>
         </a>
-
         <a href="#" target="_blank" class="project-card reveal">
           <p class="project-number">05</p>
           <h3 class="project-name">Waymaker</h3>
@@ -501,7 +474,6 @@
           </div>
           <span class="project-link">Try Beta</span>
         </a>
-
         <a href="https://space-invaders-n01i.onrender.com" target="_blank" class="project-card reveal">
           <p class="project-number">06</p>
           <h3 class="project-name">Green Zone Defence</h3>
@@ -514,11 +486,9 @@
           </div>
           <span class="project-link">Play Now</span>
         </a>
-
       </div>
     </div>
   </section>
-
   <!-- PHILOSOPHY -->
   <section class="philosophy">
     <div class="phil-bg"></div>
@@ -531,7 +501,6 @@
       </div>
     </div>
   </section>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
@@ -539,6 +508,7 @@
       <div class="footer-links">
         <a href="/about">About</a>
         <a href="https://lees-legacy.onrender.com" target="_blank">Legacy</a>
+        <a href="/restaurants">Restaurants</a>
         <a href="https://greeneyecreative-ttc.netlify.app" target="_blank">TTC</a>
         <a href="https://ayrt.onrender.com" target="_blank">AYRT</a>
         <a href="https://www.linkedin.com/in/spencer-green-70846131/" target="_blank">LinkedIn</a>
@@ -549,7 +519,6 @@
       <a href="mailto:spencer@greeneyecreative.com" class="footer-email">spencer@greeneyecreative.com</a>
     </div>
   </footer>
-
   <script>
     // IP / content protection — preserved from original
     document.addEventListener('contextmenu', e => e.preventDefault());
@@ -561,7 +530,6 @@
       if (e.ctrlKey && e.shiftKey && e.keyCode === 74) return false;
       if (e.ctrlKey && e.keyCode === 85) return false;
     };
-
     // Scroll-triggered reveal animations
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
