@@ -10,5 +10,9 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route('/restaurants')
+def restaurants():
+    return render_template('restaurants.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
