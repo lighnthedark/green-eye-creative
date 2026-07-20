@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="YYJrmN_DNOkp5N8Bt3HKAiRR1F9eNEdKpAqD3EpzGbk" />
   <title>Green Eye Creative — Built on Legacy</title>
-  <meta name="description" content="An independent studio building software for the ones who've always had to work twice as hard for half the door." />
+  <meta name="description"
+    content="An independent studio building software for the ones who've always had to work twice as hard for half the door." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --gold: #C9A84C;
@@ -19,330 +23,724 @@
       --cream: #F5F0E8;
       --cream-muted: #B8B0A0;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: var(--dark);
       color: var(--cream);
       font-family: 'Syne', sans-serif;
       overflow-x: hidden;
     }
+
     /* ─── NAV ─── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; justify-content: space-between; align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 1.5rem 3rem;
       background: linear-gradient(to bottom, rgba(10, 9, 5, 0.9), transparent);
     }
+
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem; font-weight: 600; letter-spacing: 0.15em;
-      color: var(--gold); text-decoration: none; text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-decoration: none;
+      text-transform: uppercase;
     }
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
     .nav-link {
-      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--cream-muted);
-      text-decoration: none; transition: color 0.2s;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+      text-decoration: none;
+      transition: color 0.2s;
     }
-    .nav-link:hover { color: var(--gold); }
+
+    .nav-link:hover {
+      color: var(--gold);
+    }
+
     .nav-cta {
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--dark);
-      background: var(--gold); padding: 0.6rem 1.4rem;
-      text-decoration: none; transition: background 0.3s;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dark);
+      background: var(--gold);
+      padding: 0.6rem 1.4rem;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-    .nav-cta:hover { background: var(--gold-light); }
+
+    .nav-cta:hover {
+      background: var(--gold-light);
+    }
+
     /* ─── HERO ─── */
     .hero {
-      position: relative; height: 100vh; min-height: 600px;
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 5rem 3rem; overflow: hidden;
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 5rem 3rem;
+      overflow: hidden;
     }
+
     .hero-bg {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background-image: url('/static/images/hero-bahamas.jpeg');
-      background-size: cover; background-position: center 30%;
+      background-size: cover;
+      background-position: center 30%;
       transform: scale(1.05);
       animation: heroZoom 12s ease-out forwards;
     }
-    @keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1.0); } }
+
+    @keyframes heroZoom {
+      from {
+        transform: scale(1.05);
+      }
+
+      to {
+        transform: scale(1.0);
+      }
+    }
+
     .hero-overlay {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background: linear-gradient(to top, rgba(10, 9, 5, 0.92) 0%, rgba(10, 9, 5, 0.4) 50%, rgba(10, 9, 5, 0.15) 100%);
     }
+
     .hero-content {
-      position: relative; z-index: 2; max-width: 900px;
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
       animation: fadeUp 1.2s ease-out 0.3s both;
     }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-    .hero-eyebrow {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.35em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem;
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
     .hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3.5rem, 9vw, 8rem);
-      font-weight: 300; line-height: 0.95; color: var(--cream);
-      margin-bottom: 1.5rem; letter-spacing: -0.02em;
+      font-weight: 300;
+      line-height: 0.95;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
     }
-    .hero-title em { font-style: italic; color: var(--gold); }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
     .hero-sub {
-      font-size: 1rem; font-weight: 400; color: var(--cream-muted);
-      max-width: 520px; line-height: 1.7; margin-bottom: 2.5rem;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--cream-muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
     }
-    .hero-actions { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
     .btn-primary {
-      display: inline-block; padding: 1rem 2.2rem;
-      background: var(--gold); color: var(--dark);
+      display: inline-block;
+      padding: 1rem 2.2rem;
+      background: var(--gold);
+      color: var(--dark);
       font-family: 'Syne', sans-serif;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
       transition: background 0.3s, transform 0.2s;
     }
-    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
     .btn-ghost {
-      display: inline-block; padding: 1rem 2.2rem;
+      display: inline-block;
+      padding: 1rem 2.2rem;
       border: 1px solid rgba(201, 168, 76, 0.4);
       color: var(--gold);
       font-family: 'Syne', sans-serif;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
       transition: border-color 0.3s, background 0.3s;
     }
-    .btn-ghost:hover { border-color: var(--gold); background: rgba(201, 168, 76, 0.08); }
+
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      background: rgba(201, 168, 76, 0.08);
+    }
+
     /* ─── SCROLL HINT ─── */
     .scroll-hint {
-      position: absolute; bottom: 2rem; right: 3rem; z-index: 2;
-      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      position: absolute;
+      bottom: 2rem;
+      right: 3rem;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
       opacity: 0.5;
       animation: fadeUp 1.5s ease-out 1.5s both;
     }
+
     .scroll-hint span {
-      font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
-      color: var(--cream-muted); writing-mode: vertical-rl;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+      writing-mode: vertical-rl;
     }
+
     .scroll-line {
-      width: 1px; height: 60px;
+      width: 1px;
+      height: 60px;
       background: linear-gradient(to bottom, var(--gold), transparent);
       animation: scrollPulse 2s ease-in-out infinite;
     }
+
     @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 1; transform: scaleY(1.1); }
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scaleY(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(1.1);
+      }
     }
+
     /* ─── SECTIONS ─── */
-    section { position: relative; }
-    .section-inner { max-width: 1200px; margin: 0 auto; padding: 7rem 3rem; }
+    section {
+      position: relative;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 7rem 3rem;
+    }
+
     .section-label {
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.4em;
-      text-transform: uppercase; color: var(--gold);
-      margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
+
     .section-label::after {
-      content: ''; flex: 1; height: 1px;
-      background: rgba(201, 168, 76, 0.3); max-width: 80px;
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(201, 168, 76, 0.3);
+      max-width: 80px;
     }
+
     /* ─── MISSION ─── */
-    .mission { background: var(--dark); }
-    .mission-inner { max-width: 900px; }
+    .mission {
+      background: var(--dark);
+    }
+
+    .mission-inner {
+      max-width: 900px;
+    }
+
     .mission-statement {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2rem, 4.5vw, 3.6rem);
-      font-weight: 300; line-height: 1.25; color: var(--cream);
-      margin-bottom: 2rem; letter-spacing: -0.01em;
+      font-weight: 300;
+      line-height: 1.25;
+      color: var(--cream);
+      margin-bottom: 2rem;
+      letter-spacing: -0.01em;
     }
-    .mission-statement em { font-style: italic; color: var(--gold); }
+
+    .mission-statement em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
     .mission-body {
-      font-size: 1rem; line-height: 1.85;
-      color: var(--cream-muted); max-width: 660px;
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--cream-muted);
+      max-width: 660px;
     }
+
     /* ─── ROOTS ─── */
-    .roots { background: var(--dark-2); }
+    .roots {
+      background: var(--dark-2);
+    }
+
     .roots-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 5rem; align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
     }
-    .roots-image-wrap { position: relative; height: 580px; overflow: hidden; }
+
+    .roots-image-wrap {
+      position: relative;
+      height: 580px;
+      overflow: hidden;
+    }
+
     .roots-image-wrap img {
-      width: 100%; height: 100%; object-fit: cover;
-      object-position: center top; transition: transform 0.8s ease;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.8s ease;
     }
-    .roots-image-wrap:hover img { transform: scale(1.04); }
+
+    .roots-image-wrap:hover img {
+      transform: scale(1.04);
+    }
+
     .roots-image-wrap::after {
-      content: ''; position: absolute; inset: 0;
-      border: 1px solid rgba(201, 168, 76, 0.2); pointer-events: none;
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      pointer-events: none;
     }
+
     .roots-gold-line {
-      position: absolute; top: 2rem; left: -1.5rem;
-      width: 3px; height: 80px; background: var(--gold);
+      position: absolute;
+      top: 2rem;
+      left: -1.5rem;
+      width: 3px;
+      height: 80px;
+      background: var(--gold);
     }
+
     .roots-text h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.8rem, 5vw, 4.5rem);
-      font-weight: 300; line-height: 1.1; color: var(--cream);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--cream);
       margin-bottom: 2rem;
     }
-    .roots-text h2 em { font-style: italic; color: var(--gold); }
+
+    .roots-text h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
     .roots-text p {
-      font-size: 0.95rem; line-height: 1.9;
-      color: var(--cream-muted); margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--cream-muted);
+      margin-bottom: 1.2rem;
     }
+
     .roots-names {
-      margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem;
-      border-left: 2px solid rgba(201, 168, 76, 0.3); padding-left: 1.5rem;
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-left: 2px solid rgba(201, 168, 76, 0.3);
+      padding-left: 1.5rem;
     }
+
     .roots-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem; font-style: italic; color: var(--gold);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--gold);
     }
+
     .roots-name span {
-      display: block; font-family: 'Syne', sans-serif;
-      font-size: 0.65rem; font-style: normal; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--cream-muted); margin-top: 0.2rem;
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.65rem;
+      font-style: normal;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+      margin-top: 0.2rem;
     }
+
     /* ─── PROJECTS ─── */
     .projects-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.5rem, 4vw, 4rem);
-      font-weight: 300; color: var(--cream);
-      margin-bottom: 4rem; max-width: 600px;
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 4rem;
+      max-width: 600px;
     }
-    .projects-title em { font-style: italic; color: var(--gold); }
+
+    .projects-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
     .projects-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
+
     .project-card {
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
       background: var(--dark-2);
       border: 1px solid rgba(201, 168, 76, 0.15);
       padding: 3rem;
       transition: border-color 0.3s, transform 0.3s;
-      text-decoration: none; display: flex; flex-direction: column;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
     }
+
     .project-card:hover {
       border-color: rgba(201, 168, 76, 0.5);
       transform: translateY(-4px);
     }
+
     .project-card::before {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 3px; height: 0; background: var(--gold);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--gold);
       transition: height 0.4s ease;
     }
-    .project-card:hover::before { height: 100%; }
-    .project-number {
-      font-size: 0.65rem; letter-spacing: 0.3em;
-      color: var(--gold); margin-bottom: 1.5rem; opacity: 0.7;
+
+    .project-card:hover::before {
+      height: 100%;
     }
+
+    .project-number {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+    }
+
     .project-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.2rem; font-weight: 400;
-      color: var(--cream); margin-bottom: 1rem; line-height: 1.1;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 1rem;
+      line-height: 1.1;
     }
+
     .project-desc {
-      font-size: 0.85rem; line-height: 1.8;
-      color: var(--cream-muted); margin-bottom: 2rem;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: var(--cream-muted);
+      margin-bottom: 2rem;
     }
-    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
     .tag {
-      font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
       color: var(--gold);
       border: 1px solid rgba(201, 168, 76, 0.3);
       padding: 0.3rem 0.7rem;
     }
+
     .project-link {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--gold);
-      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       margin-top: auto;
       text-decoration: none;
     }
-    .project-link::after { content: '→'; transition: transform 0.2s; }
-    .project-card:hover .project-link::after { transform: translateX(4px); }
-    .project-link + .project-link { margin-top: 0.7rem; }
+
+    .project-link::after {
+      content: '→';
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover .project-link::after {
+      transform: translateX(4px);
+    }
+
+    .project-link+.project-link {
+      margin-top: 0.7rem;
+    }
+
     /* ─── PHILOSOPHY ─── */
-    .philosophy { position: relative; overflow: hidden; }
+    .philosophy {
+      position: relative;
+      overflow: hidden;
+    }
+
     .phil-bg {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background-image: url('/static/images/austin-sunset.jpeg');
-      background-size: cover; background-position: center 20%;
+      background-size: cover;
+      background-position: center 20%;
       opacity: 0.15;
     }
+
     .phil-overlay {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background: linear-gradient(to right, var(--dark) 30%, transparent 100%);
     }
-    .phil-content { position: relative; z-index: 2; }
+
+    .phil-content {
+      position: relative;
+      z-index: 2;
+    }
+
     .phil-quote {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2rem, 4.5vw, 4rem);
-      font-weight: 300; font-style: italic; line-height: 1.3;
-      color: var(--cream); max-width: 800px; margin-bottom: 2.5rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.3;
+      color: var(--cream);
+      max-width: 800px;
+      margin-bottom: 2.5rem;
     }
-    .phil-quote em { color: var(--gold); font-style: normal; }
+
+    .phil-quote em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
     .phil-attr {
-      font-size: 0.7rem; letter-spacing: 0.3em;
-      text-transform: uppercase; color: var(--cream-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
     }
+
     /* ─── FOOTER ─── */
     footer {
       background: var(--dark-2);
       border-top: 1px solid rgba(201, 168, 76, 0.15);
     }
+
     .footer-inner {
-      max-width: 1200px; margin: 0 auto; padding: 3rem 3rem 1.5rem;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 3rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
     }
+
     .footer-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem; font-weight: 600; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--gold);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
     }
-    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
     .footer-links a {
-      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--cream-muted); text-decoration: none; transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-bottom {
-      max-width: 1200px; margin: 0 auto;
-      padding: 1.5rem 3rem 2rem;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1rem;
-      border-top: 1px solid rgba(201, 168, 76, 0.08);
-    }
-    .footer-copy {
-      font-size: 0.65rem; color: var(--cream-muted);
-      opacity: 0.6; letter-spacing: 0.1em;
-    }
-    .footer-email {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic; font-size: 1rem;
-      color: var(--cream-muted); text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+      text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-email:hover { color: var(--gold); }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem 3rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .footer-copy {
+      font-size: 0.65rem;
+      color: var(--cream-muted);
+      opacity: 0.6;
+      letter-spacing: 0.1em;
+    }
+
+    .footer-email {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--cream-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-email:hover {
+      color: var(--gold);
+    }
+
     /* ─── REVEAL ─── */
     .reveal {
-      opacity: 0; transform: translateY(30px);
+      opacity: 0;
+      transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
-      nav { padding: 1.2rem 1.5rem; }
-      .nav-right { gap: 1rem; }
-      .nav-link { display: none; }
-      .hero { padding: 4rem 1.5rem 3rem; }
-      .section-inner { padding: 5rem 1.5rem; }
-      .roots-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .roots-image-wrap { height: 380px; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .footer-inner, .footer-bottom { flex-direction: column; align-items: flex-start; padding-left: 1.5rem; padding-right: 1.5rem; }
+      nav {
+        padding: 1.2rem 1.5rem;
+      }
+
+      .nav-right {
+        gap: 1rem;
+      }
+
+      .nav-link {
+        display: none;
+      }
+
+      .hero {
+        padding: 4rem 1.5rem 3rem;
+      }
+
+      .section-inner {
+        padding: 5rem 1.5rem;
+      }
+
+      .roots-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .roots-image-wrap {
+        height: 380px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner,
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <!-- NAV -->
   <nav>
@@ -360,7 +758,8 @@
     <div class="hero-content">
       <p class="hero-eyebrow">Austin, Texas · Est. 2024</p>
       <h1 class="hero-title">Green Eye<br><em>Creative</em></h1>
-      <p class="hero-sub">An independent studio building software for the ones who've always had to work twice as hard for half the door.</p>
+      <p class="hero-sub">An independent studio building software for the ones who've always had to work twice as hard
+        for half the door.</p>
       <div class="hero-actions">
         <a href="https://lees-legacy.onrender.com" target="_blank" class="btn-primary">Visit Legacy</a>
         <a href="https://space-invaders-n01i.onrender.com" target="_blank" class="btn-ghost">Play Green Zone</a>
@@ -375,8 +774,10 @@
   <section class="mission">
     <div class="section-inner mission-inner">
       <p class="section-label reveal">The Mission</p>
-      <p class="mission-statement reveal">We build for the ones who've always had to do <em>A++ work to get a B-</em>.</p>
-      <p class="mission-body reveal">The ones who couldn't afford shortcuts, didn't have the test bank, and still showed up. Green Eye Creative exists to level that playing field — one product at a time.</p>
+      <p class="mission-statement reveal">We build for the ones who've always had to do <em>A++ work to get a B-</em>.
+      </p>
+      <p class="mission-body reveal">The ones who couldn't afford shortcuts, didn't have the test bank, and still showed
+        up. Green Eye Creative exists to level that playing field — one product at a time.</p>
     </div>
   </section>
   <!-- ROOTS -->
@@ -390,7 +791,8 @@
         <div class="roots-text reveal">
           <p class="section-label">The Foundation</p>
           <h2>Rooted in<br><em>Legacy</em></h2>
-          <p>Every line of code is built on something deeper — a lineage of people who showed up, worked hard, and left something behind worth carrying forward.</p>
+          <p>Every line of code is built on something deeper — a lineage of people who showed up, worked hard, and left
+            something behind worth carrying forward.</p>
           <p>Green Eye Creative exists because of them.</p>
           <div class="roots-names">
             <div class="roots-name">
@@ -419,7 +821,8 @@
         <div class="project-card reveal">
           <p class="project-number">01</p>
           <h3 class="project-name">Legacy</h3>
-          <p class="project-desc">Cross-platform scheduling for working operators. Live with barbers. Now piloting with Austin restaurants. One chair, one price — no tiers, no booking fees, no cuts.</p>
+          <p class="project-desc">Cross-platform scheduling for working operators. Live with barbers. Now piloting with
+            Austin restaurants. One chair, one price — no tiers, no booking fees, no cuts.</p>
           <div class="project-tags">
             <span class="tag">Live</span>
             <span class="tag">Multi-vertical</span>
@@ -432,7 +835,8 @@
         <a href="https://ayrt.onrender.com" target="_blank" class="project-card reveal">
           <p class="project-number">02</p>
           <h3 class="project-name">AYRT</h3>
-          <p class="project-desc">Authorship certification for academic integrity. Includes Legacy Access for students who need it most. Patent pending.</p>
+          <p class="project-desc">Authorship certification for academic integrity. Includes Legacy Access for students
+            who need it most. Patent pending.</p>
           <div class="project-tags">
             <span class="tag">Patent Pending</span>
             <span class="tag">EdTech</span>
@@ -444,7 +848,8 @@
         <a href="https://greeneyecreative-ttc.netlify.app" target="_blank" class="project-card reveal">
           <p class="project-number">03</p>
           <h3 class="project-name">Turing True Check</h3>
-          <p class="project-desc">Hiring integrity platform. Catches the AI. Sees the human. The reverse Turing test for resumes and submissions. Patent pending.</p>
+          <p class="project-desc">Hiring integrity platform. Catches the AI. Sees the human. The reverse Turing test for
+            resumes and submissions. Patent pending.</p>
           <div class="project-tags">
             <span class="tag">Patent Pending</span>
             <span class="tag">HR Tech</span>
@@ -455,7 +860,8 @@
         <a href="#" class="project-card reveal">
           <p class="project-number">04</p>
           <h3 class="project-name">Green Seed Co.</h3>
-          <p class="project-desc">Men's wellness tea. Avocado seed, ginger, cinnamon, lemon peel. Built for the joints, made for the long road.</p>
+          <p class="project-desc">Men's wellness tea. Avocado seed, ginger, cinnamon, lemon peel. Built for the joints,
+            made for the long road.</p>
           <div class="project-tags">
             <span class="tag">MVP</span>
             <span class="tag">Wellness</span>
@@ -477,7 +883,8 @@
         <a href="https://space-invaders-n01i.onrender.com" target="_blank" class="project-card reveal">
           <p class="project-number">06</p>
           <h3 class="project-name">Green Zone Defence</h3>
-          <p class="project-desc">A browser-based tower defense game with a global leaderboard, mobile touch controls, and authenticated user accounts. Tested by players worldwide.</p>
+          <p class="project-desc">A browser-based tower defense game with a global leaderboard, mobile touch controls,
+            and authenticated user accounts. Tested by players worldwide.</p>
           <div class="project-tags">
             <span class="tag">Live</span>
             <span class="tag">Supabase</span>
@@ -496,7 +903,8 @@
     <div class="section-inner">
       <div class="phil-content">
         <p class="section-label reveal">Philosophy</p>
-        <p class="phil-quote reveal">"Give someone wings, they fly once.<br>Teach them they already have wings,<br>they <em>soar forever</em>."</p>
+        <p class="phil-quote reveal">"Give someone wings, they fly once.<br>Teach them they already have wings,<br>they
+          <em>soar forever</em>."</p>
         <p class="phil-attr reveal">— Green Eye Creative</p>
       </div>
     </div>
@@ -509,6 +917,7 @@
         <a href="/about">About</a>
         <a href="https://lees-legacy.onrender.com" target="_blank">Legacy</a>
         <a href="/restaurants">Restaurants</a>
+        <a href="/pricing">Pricing</a>
         <a href="https://greeneyecreative-ttc.netlify.app" target="_blank">TTC</a>
         <a href="https://ayrt.onrender.com" target="_blank">AYRT</a>
         <a href="https://www.linkedin.com/in/spencer-green-70846131/" target="_blank">LinkedIn</a>
@@ -542,4 +951,5 @@
     reveals.forEach(el => observer.observe(el));
   </script>
 </body>
+
 </html>
