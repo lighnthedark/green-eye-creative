@@ -350,6 +350,7 @@
     <div class="nav-right">
       <a href="/about" class="nav-link">About</a>
       <a href="/restaurants" class="nav-link">Restaurants</a>
+      <a href="/pricing" class="nav-link">Pricing</a>
       <a href="https://lees-legacy.onrender.com" target="_blank" class="nav-cta">Legacy →</a>
     </div>
   </nav>
