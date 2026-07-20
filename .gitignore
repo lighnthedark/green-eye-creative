@@ -1,2 +1,27 @@
+# macOS system files
 .DS_Store
-New Folder With Items/
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Secrets — never commit these
+.env
+
+# Editor settings
+.vscode/
+.idea/
+
+# Personal files, not part of the website
+*.docx
+Screenshot*.png
+New World
+book_files/
+files/
+files 2/
