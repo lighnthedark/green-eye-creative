@@ -1,0 +1,101 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.site{max-width:780px;margin:0 auto;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;background:#faf6f0;position:relative}
+.watermark{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99;display:flex;align-items:center;justify-content:center}
+.watermark-text{font-size:52px;font-weight:700;color:rgba(61,15,15,0.12);transform:rotate(-35deg);white-space:nowrap;font-family:Georgia,serif;letter-spacing:.08em;user-select:none}
+.nav{background:#3d0f0f;padding:14px 28px;display:flex;justify-content:space-between;align-items:center}
+.nav-brand{color:#f5e6d3;font-size:15px;font-weight:500;letter-spacing:.04em}
+.nav-phone{color:#f5c97a;font-size:14px;font-weight:500}
+.hero{background:#3d0f0f;padding:48px 28px 40px;text-align:center;border-bottom:3px solid #8b2020}
+.hero-logo{width:120px;height:120px;background:#faf6f0;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:48px;color:#3d0f0f;font-weight:700;border:3px solid #8b2020}
+.hero h1{color:#f5e6d3;font-size:28px;font-weight:500;margin-bottom:8px;letter-spacing:.02em}
+.hero-sub{color:#f5c97a;font-size:16px;font-style:italic;margin-bottom:24px}
+.hero-tagline{color:#f5e6d3;font-size:13px;opacity:.8;margin-bottom:28px}
+.cta-btn{display:inline-block;background:#f5c97a;color:#3d0f0f;padding:12px 32px;border-radius:var(--border-radius-md);font-size:15px;font-weight:500;font-family:Georgia,serif;border:none;cursor:pointer}
+.section{padding:36px 28px}
+.section-title{font-size:18px;font-weight:500;color:#3d0f0f;margin-bottom:6px;text-align:center}
+.section-divider{width:48px;height:2px;background:#8b2020;margin:0 auto 24px;border-radius:2px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:8px}
+.service-card{background:#fff;border:0.5px solid #d4b8a0;border-radius:var(--border-radius-lg);padding:16px;text-align:center}
+.service-title{font-size:13px;font-weight:500;color:#3d0f0f;margin-bottom:4px}
+.service-desc{font-size:11px;color:#7a5c44;line-height:1.5}
+.about{background:#fff;border:0.5px solid #d4b8a0;border-radius:var(--border-radius-lg);padding:20px 24px;margin-top:4px}
+.about-text{font-size:14px;color:#5a3e2b;line-height:1.8;font-style:italic;text-align:center}
+.about-name{font-size:13px;color:#8b2020;font-weight:500;text-align:center;margin-top:10px}
+.coverage{background:#3d0f0f;padding:24px 28px;text-align:center}
+.coverage-title{color:#f5e6d3;font-size:15px;font-weight:500;margin-bottom:6px}
+.coverage-text{color:#f5c97a;font-size:13px;font-style:italic}
+.contact{padding:28px;background:#faf6f0;text-align:center;border-top:0.5px solid #d4b8a0}
+.contact-title{font-size:16px;font-weight:500;color:#3d0f0f;margin-bottom:16px}
+.phone-display{font-size:26px;font-weight:500;color:#8b2020;margin-bottom:8px;font-family:Georgia,serif}
+.contact-sub{font-size:12px;color:#7a5c44}
+.footer{background:#3d0f0f;padding:14px 28px;text-align:center}
+.footer-text{color:#7a5c44;font-size:11px}
+.footer-credit{color:#f5c97a;font-size:10px;margin-top:4px}
+</style>
+
+<div class="site">
+  <div class="watermark">
+    <div class="watermark-text">greeneyecreative.com</div>
+  </div>
+
+  <div class="nav">
+    <div class="nav-brand">Tejas Fireplace & Home Services</div>
+    <div class="nav-phone">(512) 000-0000</div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-logo">T</div>
+    <h1>Tejas Fireplace & Home Services</h1>
+    <div class="hero-sub">"I go where I'm needed."</div>
+    <div class="hero-tagline">Serving Austin, Texas — and beyond</div>
+    <button class="cta-btn">Call for a free quote</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">What we do</div>
+    <div class="section-divider"></div>
+    <div class="services">
+      <div class="service-card">
+        <div class="service-title">Fireplace installation</div>
+        <div class="service-desc">New builds and full system installs done right</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Fireplace repair</div>
+        <div class="service-desc">Gas, wood, electric — all makes and models</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Home services</div>
+        <div class="service-desc">General repairs and maintenance you can trust</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Inspections</div>
+        <div class="service-desc">Safety checks before the season starts</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="about">
+      <div class="about-text">"My customers aren't just clients — they're people who need someone they can count on. I show up, I do the work, and I don't leave until it's right."</div>
+      <div class="about-name">— Ethan Young, Fireplace Technician</div>
+    </div>
+  </div>
+
+  <div class="coverage">
+    <div class="coverage-title">Austin based. No job too far.</div>
+    <div class="coverage-text">From Central Texas to New Hampshire — if you need it fixed, Ethan will be there.</div>
+  </div>
+
+  <div class="contact">
+    <div class="contact-title">Ready to get started?</div>
+    <div class="phone-display">(512) 000-0000</div>
+    <div class="contact-sub">Call or text anytime — Ethan picks up.</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">© 2026 Tejas Fireplace and Home Services · Austin, Texas</div>
+    <div class="footer-credit">Built by Green Eye Creative · greeneyecreative.com</div>
+  </div>
+</div>
